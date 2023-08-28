@@ -46,10 +46,10 @@
             center: 'title',
             end: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek resourceTimeGridWeek'
         },
-        // buttonText: function (texts) {
-        //     texts.resourceTimeGridWeek = 'resources';
-        //     return texts;
-        // },
+        buttonText: function (texts) {
+            texts.resourceTimeGridWeek = 'resources';
+            return texts;
+        }, // 이거 없으면 화면 안보임
         resources: [
             {id: 1, title: 'Resource A'},
             {id: 2, title: 'Resource B'}
