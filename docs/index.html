@@ -33,7 +33,7 @@
 
 <body>
 
-<h4><a href="https://github.com/vkurko/calendar">Event Calendar yay</a> not Demo</h4>
+<h4><a href="https://github.com/vkurko/calendar">Event Calendar yay</a> not</h4>
 <div class="row">
     <div id="ec" class="col"></div>
 </div>
@@ -46,11 +46,11 @@
             center: 'title',
             end: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek resourceTimeGridWeek'
         },
-        // buttonText: function (texts) {
-        //     texts.resourceTimeGridWeek = 'resources';
-        //     return texts;
-        // }, 
-        // 이거 없으면 화면 안보임
+        buttonText: function (texts) {
+            texts.resourceTimeGridWeek = 'resources';
+            return texts;
+        }, 
+        // 이거 없으면 화면 안보임, 이건 문제 아님 
         resources: [
             {id: 1, title: 'Resource A'},
             {id: 2, title: 'Resource B'}
@@ -58,11 +58,11 @@
         scrollTime: '09:00:00',
         events: createEvents(),
         views: {
-            timeGridWeek: {pointer: true},
+            // timeGridWeek: {pointer: true},
             resourceTimeGridWeek: {pointer: true}
         },
         dayMaxEvents: true,
-        nowIndicator: false,
+        nowIndicator: false, // 현재 실제 시각 알려주는거
         selectable: true
     });
 
